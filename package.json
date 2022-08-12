@@ -5,8 +5,9 @@
   "author": "aaronmo <554602580@qq.com>",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "cloudbase framework deploy"
   },
   "devDependencies": {
     "vuepress": "^2.0.0-beta.49"
