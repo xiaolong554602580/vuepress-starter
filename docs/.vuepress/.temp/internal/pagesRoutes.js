@@ -11,7 +11,7 @@ export const pagesRoutes = [
   ["v-39f08e74","/accumulate/",{"title":"目录"},["/accumulate/index.html","/accumulate/README.md"]],
   ["v-72426460","/anyway/2022-08-11.html",{"title":""},["/anyway/2022-08-11","/anyway/2022-08-11.md"]],
   ["v-6ed8b322","/anyway/2022-08-12.html",{"title":"基于CentOS快速搭建LNMP环境"},["/anyway/2022-08-12","/anyway/2022-08-12.md"]],
-  ["v-0b9991fe","/anyway/2022-3-13.html",{"title":"python pip将一个包和其依赖包全部下载下来，并离线安装"},["/anyway/2022-3-13","/anyway/2022-3-13.md"]],
+  ["v-0b9991fe","/anyway/2022-3-13.html",{"title":""},["/anyway/2022-3-13","/anyway/2022-3-13.md"]],
   ["v-52d6a203","/anyway/2022_5_20.html",{"title":"Python实践：douying视频去水印"},["/anyway/2022_5_20","/anyway/2022_5_20.md"]],
   ["v-974d2b86","/anyway/linuxSetup.html",{"title":"VMware虚拟机搭建Linux环境"},["/anyway/linuxSetup","/anyway/linuxSetup.md"]],
   ["v-37d7a9f3","/anyway/",{"title":"目录"},["/anyway/index.html","/anyway/README.md"]],
