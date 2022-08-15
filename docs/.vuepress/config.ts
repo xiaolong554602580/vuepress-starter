@@ -27,6 +27,7 @@ const sidebarZh: SidebarConfig = {
         "/accumulate/mypage0.md",
         "/accumulate/mypage1.md",
         "/accumulate/mypage2.md",
+        "/accumulate/2022-08-15.md",
       ],
     },
   ],
