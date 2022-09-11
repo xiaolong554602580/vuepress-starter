@@ -30,17 +30,18 @@ jobs:
         run: npm install
       - name: build app
         run: npm run build
-      - name: Push To Pages
-        working-directory: ./docs/.vuepress/dist # 指定下面指令运行的目录
-        run:
-          git init
-          git checkout -b main
-          git add -A
-        # 这里把下面所有 `<YOUR_NAME>/<YOUR_EMAIL>/<COMMIT_MSG>/<YOUR_TOKEN>` 替换成你自己的就可以了
-          git -c user.name='aaronmo' -c user.email='554602580@qq.com' commit -m 'deploy'
-        # 这里需要一个 共开仓库 的 secrets 配置，这里的 secrets 是一个环境变量，可以直接拿过来直接用
-          git remote add origin https://${{secrets.TOKEN}}@github.com/xiaolong554602580/vuepress-starter.git
-          git push origin main -f -q
+      - name: Deploy
+      	# 将构建产物 commit 到一个分支上，用于发布静态站点资源
+      	# https://github.com/peaceiris/actions-gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # Github 会在 workflow 中自动生成 GIHUBT_TOKEN，用于认证 workflow 的运行
+          github_token: ${{ secrets.TOKEN }}
+          # 静态资源目录设置
+          publish_dir: ./docs/.vuepress/dist
+          # 默认发布到 gh-pages 分支上，可以指定特定的发布分支（不能选拉取代码的分支）
+          publish_branch: gh-pages
+          full_commit_message: ${{ github.event.head_commit.message }}
 
 
 
