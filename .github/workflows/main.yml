@@ -33,7 +33,7 @@ jobs:
 
       - name: Deploy blog
         env:
-          GITHUB_REPO: github.com/xiaolong554602580/blog.github.io
+          GITHUB_REPO: xiaolong554602580/blog
         # 将编译后的博客文件推送到指定仓库
         run: |
           cd ./docs/.vuepress/dist && git init && git add .
