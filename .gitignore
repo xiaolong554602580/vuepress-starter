@@ -6,3 +6,4 @@ docs/.vuepress/dist
 *.bat
 deploy.sh
 deploy.md
+cloudbaserc.json
