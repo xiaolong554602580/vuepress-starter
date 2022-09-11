@@ -32,7 +32,7 @@ jobs:
         run: npm run build
       - name: Push To Pages
         working-directory: ./docs/.vuepress/dist # 指定下面指令运行的目录
-        run: |
+        run:
           git init
           git checkout -b main
           git add -A
