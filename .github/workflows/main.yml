@@ -33,7 +33,7 @@ jobs:
 
       - name: Deploy blog
         env:
-          GITHUB_REPO: xiaolong554602580/blog.git
+          GITHUB_REPO: github.com/xiaolong554602580/blog
         # 将编译后的博客文件推送到指定仓库
         run: |
           cd ./docs/.vuepress/dist && git init && git add .
@@ -41,7 +41,7 @@ jobs:
           git config user.email "554602580@qq.com"
           git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force --quiet "https://xiaolong554602580:${{ secrets.TOKEN }}@$GITHUB_REPO" master:main
+          git push --force --quiet "https://${{ secrets.TOKEN }}@$GITHUB_REPO" master:master
         # git push --force --quiet "https://RoYFbFDSfM:${{ secrets.CODING_TOKEN }}@$CODING_REPO" master:master
         # git push --force --quiet "https://yifanzheng:${{ secrets.GITEE_ACCESS_TOKEN }}@$GITEE_REPO" master:master
 
