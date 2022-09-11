@@ -23,10 +23,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3 
       - name: install nodejs
         uses: actions/setup-node@2.5.1
         with: 
-          node-version: "14.X"
+          node-version: "16"
       - name: install deps
         run: npm install
       - name: build app
