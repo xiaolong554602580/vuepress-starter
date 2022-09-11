@@ -1,53 +1,42 @@
-# This is a basic workflow to help you get started with Actions
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
 
-name: deploy-website
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
+  # Runs on pushes targeting the default branch
   push:
-    branches: [ "master" ]
-
+    branches: ["master"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3 
-        with: 
-          node-version: "16"
-      - name: install deps
-        run: npm install
-      - name: build app
-        run: npm run build
-
-      - name: Deploy blog
-        env:
-          GITHUB_REPO: xiaolong554602580/blog
-        # 将编译后的博客文件推送到指定仓库
-        run: |
-          cd ./docs/.vuepress/dist && git init && git add .
-          git config user.name "xiaolong554602580"
-          git config user.email "554602580@qq.com"
-          git add .
-          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force --quiet "https://${{ secrets.TOKEN }}@$GITHUB_REPO" master:main
-        # git push --force --quiet "https://RoYFbFDSfM:${{ secrets.CODING_TOKEN }}@$CODING_REPO" master:master
-        # git push --force --quiet "https://yifanzheng:${{ secrets.GITEE_ACCESS_TOKEN }}@$GITEE_REPO" master:master
-
-
-
-
-
-
-
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
