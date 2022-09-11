@@ -58,6 +58,7 @@ const sidebarZh: SidebarConfig = {
 };
 
 export default defineUserConfig({
+  base:'/',
   head: head,
   locales: {
     "/": {
@@ -66,6 +67,7 @@ export default defineUserConfig({
       description: "为所谓的想法，赋予实现",
     },
   },
+  
   theme: defaultTheme({
     repo: "xiaolong554602580/vuepress-starter",
     docsDir: "docs",
