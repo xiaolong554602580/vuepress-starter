@@ -4,3 +4,5 @@ docs/.vuepress/.temp
 docs/.vuepress/dist
 
 *.bat
+deploy.sh
+deploy.md

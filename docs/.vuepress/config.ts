@@ -65,6 +65,7 @@ export default defineUserConfig({
       description: "为所谓的想法，赋予实现",
     },
   },
+  base:'/vuepress-starter/',
   theme: defaultTheme({
     repo: "xiaolong554602580/vuepress-starter",
     docsDir: "docs",
