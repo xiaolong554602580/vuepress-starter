@@ -58,7 +58,7 @@ const sidebarZh: SidebarConfig = {
 };
 
 export default defineUserConfig({
-  base:'/',
+  base:'/blog/',
   head: head,
   locales: {
     "/": {
