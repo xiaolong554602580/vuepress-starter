@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /images/logo.jpg
+heroImage: ./images/logo.jpg
 actionText: 关于我 →
 actionLink: /pages/aboutme/
 features:

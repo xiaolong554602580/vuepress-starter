@@ -41,6 +41,7 @@ const sidebarZh: SidebarConfig = {
         "/anyway/2022-3-13.md",
         "/anyway/2022-08-11.md",
         "/anyway/2022-08-12.md",
+        "/anyway/Win10-VScode运行Python3虚拟环境记录.md"
       ],
     },
   ],
@@ -65,7 +66,6 @@ export default defineUserConfig({
       description: "为所谓的想法，赋予实现",
     },
   },
-  base:'/vuepress-starter/',
   theme: defaultTheme({
     repo: "xiaolong554602580/vuepress-starter",
     docsDir: "docs",
