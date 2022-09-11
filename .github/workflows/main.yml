@@ -30,6 +30,18 @@ jobs:
         run: npm install
       - name: build app
         run: npm run build
+      - name: Push To Pages
+        working-directory: ./docs/.vuepress/dist # 指定下面指令运行的目录
+        run: |
+          git init
+          git checkout -b main
+          git add -A
+        # 这里把下面所有 `<YOUR_NAME>/<YOUR_EMAIL>/<COMMIT_MSG>/<YOUR_TOKEN>` 替换成你自己的就可以了
+          git -c user.name='aaronmo' -c user.email='554602580@qq.com' commit -m 'deploy'
+        # 这里需要一个 共开仓库 的 secrets 配置，这里的 secrets 是一个环境变量，可以直接拿过来直接用
+          git remote add origin https://${{secrets.TOKEN}}@github.com/xiaolong554602580/vuepress-starter.git
+          git push origin main -f -q
+
 
 
 
