@@ -3,5 +3,6 @@ home: true
 heroImage: ./images/logo.jpg
 actionText: 关于我 →
 actionLink: /pages/aboutme/
-footer: 粤ICP备2022024188号https://beian.miit.gov.cn/| Copyright © 2022-present
+footerHtml:true
+footer: <a href="https://beian.miit.gov.cn/">粤ICP备2022024188号</a>| Copyright © 2022-present
 ---
