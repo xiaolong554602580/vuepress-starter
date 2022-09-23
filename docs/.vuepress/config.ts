@@ -23,11 +23,6 @@ const sidebarZh: SidebarConfig = {
       text: "前端学习",
       children: [
         "/accumulate/README.md",
-        "/accumulate/2022_3_11.md",
-        "/accumulate/mypage0.md",
-        "/accumulate/mypage1.md",
-        "/accumulate/mypage2.md",
-        "/accumulate/2022-08-15.md",
       ],
     },
   ],
@@ -36,13 +31,7 @@ const sidebarZh: SidebarConfig = {
       text: "后端学习",
       children: [
         "/anyway/README.md",
-        "/anyway/linuxSetup.md",
-        "/anyway/2022_5_20.md",
-        "/anyway/2022-3-13.md",
-        "/anyway/2022-08-11.md",
-        "/anyway/2022-08-12.md",
-        "/anyway/Win10-VScode运行Python3虚拟环境记录.md"
-      ],
+        ],
     },
   ],
   "/algorithm/": [
@@ -50,8 +39,6 @@ const sidebarZh: SidebarConfig = {
       text: "职业技能",
       children: [
         "/algorithm/README.md",
-        "/algorithm/2022_1_13.md",
-        "/algorithm/2022_5_15.md",
       ],
     },
   ],
